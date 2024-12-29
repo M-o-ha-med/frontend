@@ -25,7 +25,7 @@ function App() {
         <Route path="/booking" element={<Booking />} />
         <Route path="/process" element={<Process />} />
         <Route path="/Admin" element={<AdminLandingPage />} />
-		<Route path="/Admin/update-hotel/:id" element={<UpdateHotelPage />} />
+	<Route path="/Admin/update-hotel/:id" element={<UpdateHotelPage />} />
       </Routes>
       <Footer />
     </Router>
