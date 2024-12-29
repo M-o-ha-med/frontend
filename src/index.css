@@ -5,7 +5,7 @@
 
 
 .bg-hero {
-    background-image: url('13670.jpg');
+    background-image: url('/assets/13670.jpg');
     background-size: cover;
     background-position: center;
   }
