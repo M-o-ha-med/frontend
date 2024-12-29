@@ -16,7 +16,7 @@ const UpdateHotelPage = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/hotel/${id}`, {
+      .get(`https://backend-rose-seven.vercel.app/api/hotel/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -57,7 +57,7 @@ const UpdateHotelPage = () => {
     }
 
     axios
-      .patch(`http://localhost:3000/api/admin/hotels/${id}`, formData, {
+      .patch(`https://backend-rose-seven.vercel.app/api/admin/hotels/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",
