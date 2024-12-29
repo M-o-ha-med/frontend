@@ -50,7 +50,7 @@ const Booking = () => {
 	formData.userID = userID;
     console.log("Booking Data:", formData);
     axios
-      .post("http://localhost:3000/api/bookings", formData, {
+      .post("https://backend-rose-seven.vercel.app/api/bookings", formData, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((result) => {
@@ -63,7 +63,7 @@ const Booking = () => {
   useEffect(() => {
     const fetchHotels = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/hotel`);
+        const response = await axios.get(`https://backend-rose-seven.vercel.app/api/hotel`);
         setHotels(response.data);
         console.log(token);
         // Set initial filtered hotels based on default regionID
