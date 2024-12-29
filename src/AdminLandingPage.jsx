@@ -37,7 +37,7 @@ const fetchOrders = () => {
   // Fetch hotels from API
   const fetchHotels = () => {
     axios
-      .get("https://backend-rose-seven.vercel.appapi/hotel")
+      .get("https://backend-rose-seven.vercel.app/api/hotel")
       .then((result) => {
         console.log(result.data);
 		console.log(token);
