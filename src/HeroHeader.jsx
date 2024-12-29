@@ -7,7 +7,7 @@ const HeroHeader = () => {
   const token = sessionStorage.getItem('jwtToken');
   const fetchHotels = () => {
     axios
-      .get("http://localhost:3000/api/hotel" , {
+      .get("https://backend-rose-seven.vercel.app/api/hotel" , {
 		 headers: {
           "Authorization": `${token}` 
         }
