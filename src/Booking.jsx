@@ -96,7 +96,7 @@ const Booking = () => {
             </p>
             <p className="mb-6 leading-relaxed">
               Wherever your travels take you, BOBO is here to make your booking process smooth, 
-              reliable, and enjoyable. Start planning your next adventure today!
+              reliable, and enjoyable. Start planning your next adventure today!</p>
 
             <h5 className="text-3xl md:text-5xl font-extrabold mb-6">Simple, Fast, and Secure</h5>
             <p className="mb-4 leading-relaxed">
