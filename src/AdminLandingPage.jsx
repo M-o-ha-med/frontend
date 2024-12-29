@@ -83,7 +83,9 @@ const fetchOrders = () => {
 
   const confirmOrder = (id) => {
     axios
-      .patch(`https://backend-rose-seven.vercel.app/api/bookings/${id}/confirm`)
+      .patch(`https://backend-rose-seven.vercel.app/api/bookings/${id}/confirm`, {
+      headers: { Authorization: `Bearer ${token}` }
+    })
       .then((result) => {
         setOrders((prevOrders) =>
           prevOrders.map((order) =>
