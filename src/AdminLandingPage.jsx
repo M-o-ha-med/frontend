@@ -23,7 +23,7 @@ const AdminLandingPage = () => {
   // Fetch orders from API
 const fetchOrders = () => {
   axios
-    .get("http://localhost:3000/api/bookings", {
+    .get("https://backend-rose-seven.vercel.app/api/bookings", {
       headers: { Authorization: `Bearer ${token}` }, 
     })
     .then((result) => {
@@ -37,7 +37,7 @@ const fetchOrders = () => {
   // Fetch hotels from API
   const fetchHotels = () => {
     axios
-      .get("http://localhost:3000/api/hotel")
+      .get("https://backend-rose-seven.vercel.appapi/hotel")
       .then((result) => {
         console.log(result.data);
 		console.log(token);
@@ -70,7 +70,7 @@ const fetchOrders = () => {
     });
 
     axios
-      .post("http://localhost:3000/api/admin/hotels", formData, {
+      .post("https://backend-rose-seven.vercel.app/api/admin/hotels", formData, {
         headers: { Authorization: `Bearer ${token}` ,  "Content-Type": "multipart/form-data" },
       })
       .then((result) => {
@@ -83,7 +83,7 @@ const fetchOrders = () => {
 
   const confirmOrder = (id) => {
     axios
-      .patch(`http://localhost:3000/api/bookings/${id}/confirm`)
+      .patch(`https://backend-rose-seven.vercel.app/api/bookings/${id}/confirm`)
       .then((result) => {
         setOrders((prevOrders) =>
           prevOrders.map((order) =>
@@ -100,7 +100,7 @@ const fetchOrders = () => {
 
   const deleteOrder = (id) => {
     axios
-      .delete(`http://localhost:3000/api/bookings/${id}/delete`, {
+      .delete(`https://backend-rose-seven.vercel.app/api/bookings/${id}/delete`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(() => fetchOrders())
@@ -109,7 +109,7 @@ const fetchOrders = () => {
   
   const deleteHotel = (id) => {
     axios
-      .delete(`http://localhost:3000/api/admin/hotels/${id}`  , {
+      .delete(`https://backend-rose-seven.vercel.app/api/admin/hotels/${id}`  , {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(() => fetchHotels())
