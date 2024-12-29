@@ -55,6 +55,7 @@ const Booking = () => {
       })
       .then((result) => {
         console.log("Booking added successfully:", result.data);
+	alert("Booking successfully added");
       })
       .catch((err) => console.error(err));
   };
