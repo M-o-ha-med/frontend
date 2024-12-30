@@ -98,15 +98,6 @@ const Booking = () => {
             <p className="mb-6 leading-relaxed">
               Wherever your travels take you, BOBO is here to make your booking process smooth, 
               reliable, and enjoyable. Start planning your next adventure today!</p>
-
-            <h5 className="text-3xl md:text-5xl font-extrabold mb-6">Simple, Fast, and Secure</h5>
-            <p className="mb-4 leading-relaxed">
-            At BOBO, we’ve made hotel booking as easy as dreaming about your next destination. With just a few clicks, you’ll secure the perfect place to stay—saving time, effort, and money!
-            </p>
-            <p className="mb-6 leading-relaxed">
-            Wherever your travels take you, BOBO is here to make your booking process smooth, reliable, and enjoyable. Start planning your next adventure today!
-
-            </p>
           </div>
 
           {/* Right Column - Booking Form */}
