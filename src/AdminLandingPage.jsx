@@ -80,20 +80,25 @@ const fetchOrders = () => {
       .catch((err) => console.error(err));
   };
 
-  const confirmOrder = (id) => {
-    axios
-      .patch(`https://backend-rose-seven.vercel.app/api/bookings/${id}/confirm`, {
-       headers: { Authorization: `Bearer ${token}` },
+const confirmOrder = (id) => {
+  axios
+    .patch(
+      `https://backend-rose-seven.vercel.app/api/bookings/${id}/confirm`,
+      {},
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    )
+    .then((result) => {
+      setOrders((prevOrders) =>
+        prevOrders.map((order) =>
+          order.bookingID === id ? { ...order, isConfirmed: true } : order
+        )
+      );
     })
-      .then((result) => {
-        setOrders((prevOrders) =>
-          prevOrders.map((order) =>
-            order.bookingID === id ? { ...order, isConfirmed: true } : order
-          )
-        );
-      })
-      .catch((err) => console.error(err));
-  };
+    .catch((err) => console.error(err));
+};
+
   
   const updateHotel = (id) => {
     navigate(`update-hotel/${id}`);
