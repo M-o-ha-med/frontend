@@ -4,7 +4,7 @@ import axios from "axios";
 
 const HeroHeader = () => {
   const [hotels, setHotels] = useState([]); 
-  const token = sessionStorage.getItem('jwtToken');
+  const token = sessionStorage.getItem('token');
   const fetchHotels = () => {
     axios
       .get("https://backend-rose-seven.vercel.app/api/hotel")
