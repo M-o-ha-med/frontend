@@ -54,7 +54,7 @@ const HeroHeader = () => {
               <div className="col-md-3 mb-4" key={hotel.hotelID}>
                 <div className="card">
                   <img
-                    src={`backend/Images/${hotel.photo}`}// Replace with `hotel.image` if available dynamically
+                    src={`${hotel.photo}`}// Replace with `hotel.image` if available dynamically
                     className="card-img-top"
                     alt={hotel.namaHotel}
                   />
