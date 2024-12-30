@@ -40,7 +40,6 @@ const fetchOrders = () => {
       .get("https://backend-rose-seven.vercel.app/api/hotel")
       .then((result) => {
         console.log(result.data);
-		console.log(token);
 		console.log(sss);
         setHotels(result.data); // Update hotels state
       })
@@ -84,7 +83,7 @@ const fetchOrders = () => {
   const confirmOrder = (id) => {
     axios
       .patch(`https://backend-rose-seven.vercel.app/api/bookings/${id}/confirm`, {
-      headers: { Authorization: `Bearer ${token}` },
+       headers: { Authorization: `Bearer ${token}` },
     })
       .then((result) => {
         setOrders((prevOrders) =>
