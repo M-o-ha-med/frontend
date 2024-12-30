@@ -7,11 +7,7 @@ const HeroHeader = () => {
   const token = sessionStorage.getItem('jwtToken');
   const fetchHotels = () => {
     axios
-      .get("https://backend-rose-seven.vercel.app/api/hotel" , {
-		 headers: {
-          "Authorization": `${token}` 
-        }
-	  })
+      .get("https://backend-rose-seven.vercel.app/api/hotel")
       .then((result) => {
         setHotels(result.data);
       })
@@ -66,14 +62,16 @@ const HeroHeader = () => {
             ))}
           </div>
           {/* Button "Cari lebih lanjut yuk!" */}
-          <div className="text-center mt-5">
-            <Link
-              to="/signup" // Tombol menuju halaman Register
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full"
-            >
-              Cari lebih lanjut yuk!
-            </Link>
-          </div>
+	{!token && (
+	  <div className="text-center mt-5">
+	    <Link
+	      to="/signup"
+	      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full"
+	    >
+	      Cari lebih lanjut yuk!
+	    </Link>
+	  </div>
+	)}
         </div>
       </div>
     </>
