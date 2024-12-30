@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 const Booking = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     regionID: "1",
     hotelID: "",
@@ -56,6 +58,7 @@ const Booking = () => {
       .then((result) => {
         console.log("Booking added successfully:", result.data);
 	alert("Booking successfully added");
+	navigate('/');
       })
       .catch((err) => console.error(err));
   };
